@@ -1,0 +1,10 @@
+name: OR condition demo
+on: push
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run for Ajay
+        if: github.actor == 'Ajay' || github.actor == 'AjayS0708'
+        run: echo "IT is triggered by either Ajay r Git"
